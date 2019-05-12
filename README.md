@@ -1,6 +1,4 @@
-# monix-circe - Streaming JSON parsing for circe with Monix Observable [![Build Status](https://travis-ci.com/Avasil/monix-circe.svg?branch=master)](https://travis-ci.com/Avasil/monix-circe) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.monix/monix-circe_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.monix/monix-circe_2.12)
-
-## [Head on over to the microsite](https://Avasil.github.io/monix-circe)
+# Streaming JSON parsing for circe with Monix Observable [![Build Status](https://travis-ci.com/Avasil/monix-circe.svg?branch=master)](https://travis-ci.com/Avasil/monix-circe) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/io.monix/monix-circe_2.12/badge.svg)](https://maven-badges.herokuapp.com/maven-central/io.monix/monix-circe_2.12)
 
 ## Quick Start
 
@@ -12,6 +10,10 @@ libraryDependencies ++= Seq(
   "io.monix" %% "monix-circe" % "<version>"
 )
 ```
+
+## Acknowledgements
+
+Inspired by [circe-fs2](https://github.com/circe/circe-fs2) and [circe-iteratee](https://github.com/circe/circe-iteratee).
 
 ## License
 
