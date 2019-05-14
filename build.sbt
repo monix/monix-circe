@@ -34,7 +34,7 @@ lazy val commonSettings = Seq(
   scalacOptions in (Compile, doc) ++= Seq(
       "-groups",
       "-sourcepath", (baseDirectory in LocalRootProject).value.getAbsolutePath,
-      "-doc-source-url", "https://github.com/Avasil/monix-circe/blob/v" + version.value + "€{FILE_PATH}.scala"
+      "-doc-source-url", "https://github.com/monix/monix-circe/blob/v" + version.value + "€{FILE_PATH}.scala"
   ),
 
   addCompilerPlugin("org.typelevel" % "kind-projector" % kindProjectorVersion cross CrossVersion.binary),
@@ -93,11 +93,11 @@ lazy val releaseSettings = {
     releasePublishArtifactsAction := PgpKeys.publishSigned.value,
     scmInfo := Some(
       ScmInfo(
-        url("https://github.com/Avasil/monix-circe"),
-        "git@github.com:Avasil/monix-circe.git"
+        url("https://github.com/monix/monix-circe"),
+        "git@github.com:monix/monix-circe.git"
       )
     ),
-    homepage := Some(url("https://github.com/Avasil/monix-circe")),
+    homepage := Some(url("https://github.com/monix/monix-circe")),
     licenses := Seq("Apache-2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt")),
     publishMavenStyle := true,
     pomIncludeRepository := { _ =>
