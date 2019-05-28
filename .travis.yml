@@ -13,8 +13,8 @@ script:
   - sbt ++$TRAVIS_SCALA_VERSION mimaReportBinaryIssues
 
 after_success:
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && test $TRAVIS_REPO_SLUG == "Avasil/monix-circe" && sbt ++$TRAVIS_SCALA_VERSION publish
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && test $TRAVIS_REPO_SLUG == "Avasil/monix-circe" && test $TRAVIS_SCALA_VERSION == "2.12.8"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && test $TRAVIS_REPO_SLUG == "monix/monix-circe" && sbt ++$TRAVIS_SCALA_VERSION publish
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && test $TRAVIS_REPO_SLUG == "monix/monix-circe" && test $TRAVIS_SCALA_VERSION == "2.12.8"
 
 cache:
   directories:
