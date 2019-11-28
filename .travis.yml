@@ -2,7 +2,8 @@ sudo: false
 language: scala
 
 scala:
-  - 2.12.8
+  - 2.13.1
+  - 2.12.10
   - 2.11.12
 
 jdk:
@@ -10,11 +11,10 @@ jdk:
 
 script:
   - sbt ++$TRAVIS_SCALA_VERSION test
-  - sbt ++$TRAVIS_SCALA_VERSION mimaReportBinaryIssues
 
 after_success:
   - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && test $TRAVIS_REPO_SLUG == "monix/monix-circe" && sbt ++$TRAVIS_SCALA_VERSION publish
-  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && test $TRAVIS_REPO_SLUG == "monix/monix-circe" && test $TRAVIS_SCALA_VERSION == "2.12.8"
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && test $TRAVIS_REPO_SLUG == "monix/monix-circe" && test $TRAVIS_SCALA_VERSION == "2.13.1"
 
 cache:
   directories:

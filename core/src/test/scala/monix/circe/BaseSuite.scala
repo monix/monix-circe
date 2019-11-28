@@ -24,6 +24,7 @@ import minitest.laws.Checkers
 import monix.execution.Scheduler
 import monix.reactive.Observable
 import org.typelevel.jawn.AsyncParser
+import scala.collection.immutable.Stream
 
 trait BaseSuite extends TestSuite[Scheduler] with Checkers with TestCases {
 

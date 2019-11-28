@@ -21,6 +21,7 @@ import io.circe.jawn.CirceSupportParser
 import io.circe.{Decoder, Json}
 import monix.reactive.Observable
 import org.typelevel.jawn.{AsyncParser, ParseException}
+import scala.collection.Seq
 
 package object circe {
 

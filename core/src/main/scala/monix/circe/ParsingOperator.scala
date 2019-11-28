@@ -26,6 +26,7 @@ import org.typelevel.jawn.{AsyncParser, ParseException}
 
 import scala.concurrent.Future
 import scala.util.control.NonFatal
+import scala.collection.Seq
 
 private[circe] abstract class ParsingOperator[In](mode: AsyncParser.Mode) extends Observable.Operator[In, Json] {
 
