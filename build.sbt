@@ -26,8 +26,8 @@ lazy val contributors = Seq(
   "Avasil" -> "Piotr Gawrys"
 )
 
-val circeVersion = "0.12.3"
-val jawnVersion = "0.14.3"
+val circeVersion = "0.11.2"
+val jawnVersion = "0.14.2"
 val monixVersion = "3.1.0"
 
 val minitestVersion = "2.7.0"
