@@ -1,5 +1,3 @@
-import sbtcrossproject.CrossPlugin.autoImport.{CrossType, crossProject}
-
 val compilerOptions = Seq(
   "-deprecation",
   "-encoding",

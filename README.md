@@ -7,7 +7,7 @@ To use monix-circe in an existing SBT project with Scala 2.11 or a later version
 
 ```scala
 libraryDependencies ++= Seq(
-  "io.monix" %% "monix-circe" % "0.0.1"
+  "io.monix" %% "monix-circe" % "0.0.2"
 )
 ```
 
