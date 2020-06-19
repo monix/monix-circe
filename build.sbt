@@ -24,13 +24,9 @@ lazy val contributors = Seq(
   "Avasil" -> "Piotr Gawrys"
 )
 
-def circeVersion(scalaVersion: String) = CrossVersion.partialVersion(scalaVersion) match {
-  case Some((2, 11)) => "0.11.2"
-  case _             => "0.13.0"
-}
-
 val jawnVersion = "1.0.0"
 val monixVersion = "3.2.2"
+val circeVersion = "0.13.0"
 
 val minitestVersion = "2.7.0"
 
@@ -47,7 +43,7 @@ lazy val commonSettings = Seq(
   organization := "io.monix",
 
   scalaVersion := "2.13.1",
-  crossScalaVersions := Seq("2.11.12", "2.12.10", "2.13.1"),
+  crossScalaVersions := Seq("2.12.10", "2.13.1"),
   scalacOptions ++= compilerOptions,
   scalacOptions ++= (
     if (priorTo2_13(scalaVersion.value))
@@ -67,9 +63,9 @@ lazy val commonSettings = Seq(
   testFrameworks := Seq(new TestFramework("minitest.runner.Framework")),
   libraryDependencies ++= Seq(
     "io.monix" %% "monix-reactive" % monixVersion,
-    "io.circe" %% "circe-jawn" % circeVersion(scalaVersion.value),
-    "io.circe" %% "circe-generic" % circeVersion(scalaVersion.value) % Test,
-    "io.circe" %% "circe-testing" % circeVersion(scalaVersion.value) % Test,
+    "io.circe" %% "circe-jawn" % circeVersion,
+    "io.circe" %% "circe-generic" % circeVersion % Test,
+    "io.circe" %% "circe-testing" % circeVersion % Test,
     "org.typelevel" %% "jawn-parser" % jawnVersion,
     "io.monix" %% "minitest" % minitestVersion % Test,
     "io.monix" %% "minitest-laws" % minitestVersion % Test
