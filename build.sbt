@@ -26,11 +26,11 @@ lazy val contributors = Seq(
 
 def circeVersion(scalaVersion: String) = CrossVersion.partialVersion(scalaVersion) match {
   case Some((2, 11)) => "0.11.2"
-  case _             => "0.12.3"
+  case _             => "0.13.0"
 }
 
-val jawnVersion = "0.14.3"
-val monixVersion = "3.1.0"
+val jawnVersion = "1.0.0"
+val monixVersion = "3.2.2"
 
 val minitestVersion = "2.7.0"
 
